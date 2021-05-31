@@ -13,7 +13,7 @@ public:
 		age = aage;
 	}
 
-	Human(const Human& other) {
+	Human(const Human &other) {
 		pname = new char[strlen(other.pname) + 1];
 		strcpy(pname, other.pname);
 		age = other.age;

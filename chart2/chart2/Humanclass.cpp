@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-class Human
+class Human //멤버변수와 함수 둘다 포함
 {
 public:
 	char name[12];
@@ -13,6 +13,6 @@ public:
 
 int main()
 {
-	Human kim = { "김상형", 29 };
+	Human kim = { "김상형", 29 };//human클래스안에 객체가kim
 	kim.intro();
 }

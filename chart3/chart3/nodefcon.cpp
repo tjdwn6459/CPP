@@ -15,7 +15,7 @@ public:
 	}
 
 	Human(const char* aname, int aage) {
-		strcpy(name, aname);
+		strcpy(name, aname);//private을 쓰기위해
 		age = aage;
 	}
 
@@ -35,7 +35,7 @@ int main()
 		{Human("박상막", 49)}
 	};
 
-	arFriend[2].intro();
+	arFriend[2].intro();//두번째 방에 있는 주소를 호출하면 데이터값 출력
 
 
 }

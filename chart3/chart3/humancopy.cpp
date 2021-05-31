@@ -9,7 +9,7 @@ private:
 
 public:
 	Human(const char* aname, int aage) {
-		pname = new char[strlen(aname) + 1];
+		pname = new char[strlen(aname) + 1];//동적할당
 		strcpy(pname, aname);
 		age = aage;
 	}
@@ -27,7 +27,7 @@ int main()
 {
 
 	Human kang("강감찬", 1424);
-	Human boy = kang;
+	Human boy = kang; //boy에 kang의 값을 복사 
 
 	boy.intro();
 }

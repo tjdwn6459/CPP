@@ -1,11 +1,11 @@
 #include <stdio.h>
-
+//오버로딩 
 class Time
 {
 private:
 	int hour, min, sec;
 public:
-	Time(int h, int m, int s) {
+	Time(int h, int m, int s) { //멤버 변수 생성
 		hour = h;
 		min = m;
 		sec = s;
@@ -25,7 +25,7 @@ public:
 
 int main()
 {
-	Time now(12, 30, 40);
+	Time now(12, 30, 40);//Time클래스에 now인스턴스 생성 (변수 3개 오버로딩)-> 갯수랑 자료형이달라서 Time같은거 쓸 수 있다 
 	now.OutTime();
 	Time noon(44000);
 	noon.OutTime();
