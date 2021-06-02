@@ -13,7 +13,7 @@ public:
 		printf("디폴트 생성자 !!\n");
 	};
 
-	CTest(int num) {//인수를 하나가지는 생성자(변환 생성자)
+	CTest(int num) {//인수를 하나가지는 생성자(변환 생성자)->값을 변환해 private에 접근 
 		m_num = num; //m_num에 전달되는 num을 집어 넣어라
 		printf("생성자 호출 : %d\n", m_num);
 	}
