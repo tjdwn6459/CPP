@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int count = 0;
+int count = 0;//전역변수
 class Simple
 {
 private:
@@ -16,9 +16,9 @@ public:
 
 int main()
 {
-	Simple s, * ps;
+	Simple s, * ps;//객체 1개, 포인터 ps
 	s.OutCount();
-	ps = new Simple;
+	ps = new Simple;//ps를 새로운 객체로 선언
 	ps->OutCount();
 	delete ps;
 	s.OutCount();

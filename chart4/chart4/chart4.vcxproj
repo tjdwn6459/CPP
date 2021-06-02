@@ -142,7 +142,7 @@
     <ClInclude Include="C:\Users\PKNU\Desktop\cursor.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="mutable.cpp" />
+    <ClCompile Include="constfunc.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

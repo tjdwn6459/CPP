@@ -21,7 +21,7 @@ public:
 	CTest(int num, int* ptr) {//인자2개를 생성하기 위한 생성자
 		this->m_num = num;
 		this->ptr = new int;//메모리 동적할당 받고 시작주소를 저장
-		this->ptr = ptr;
+		this->ptr = ptr;//메모리 동적할당을 받았으니 ptr저장
 		printf("인자 두개  생성자 호출 !! : %d, %p", m_num, ptr);
 	}
 

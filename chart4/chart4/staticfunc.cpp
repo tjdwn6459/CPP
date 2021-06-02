@@ -4,14 +4,14 @@ class Simple
 {
 private:
 	int value;
-	static int count;
+	static int count; //정적멤버 변수 
 
 public:
-	Simple() { count++; }
+	Simple() { count++; }//인수하나에 정적멤버 변수count를 써서 개수를 나타냄
 	~Simple() { count--; }
-	static void InitCount() {
+	/*static void InitCount() {
 		count = 0;
-	}
+	}*/
 
 	static void OutCount() {
 		printf("현재 객체 개수 = %d\n", count);
@@ -22,15 +22,15 @@ int Simple::count;
 
 int main()
 {
-	Simple::InitCount();
-	Simple::OutCount();
+	/*Simple::InitCount();
+	Simple::OutCount();*/
 	Simple s, * ps;
 	Simple::OutCount();
 	ps = new Simple;
 	Simple::OutCount();
 	delete ps;
 	Simple::OutCount();
-	printf("크기 = %d\n", sizeof(s))
+	printf("크기 = %d\n", sizeof(s));
 
 
 

@@ -3,10 +3,10 @@
 class Enemy
 {
 private:
-	const int Speed; //생성자 호출
+	const int Speed; //생성자 호출(상수화)
 
 public:
-	Enemy(int aSpeed): Speed(aSpeed){}//매개변수가 하나라 변환생성자 역할을 한다
+	Enemy(int aSpeed): Speed(aSpeed){}//매개변수가 하나라 변환생성자 역할을 한다(
 	void Move() {
 		printf("%d의 속도로 움직인다 \n", Speed);
 	}

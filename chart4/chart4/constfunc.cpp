@@ -8,7 +8,7 @@ private:
 public:
 	Time(int h, int m, int s)
 	{
-		SetTime(h, m, s);
+		SetTime(h, m, s);//값을 바꾼다 
 	}
 
 	void SetTime(int h, int m, int s) //일반적인 멤버함수 타입
@@ -32,7 +32,7 @@ int main()
 	now.OutTime();
 
 	const Time metting(16, 00, 00);//metting객체를 상수화  한다->상수화 시킨 멤버 함수만 사용이 가능(일반 멤버변수는 사용안댄다)
-	
+	/*metting.SetTime(16, 00, 00) ->const로 metting 객체를 상수화 시켜서 값 바꾸기가 안된다 */
 	metting.OutTime();//상수멤버함수 
 
 

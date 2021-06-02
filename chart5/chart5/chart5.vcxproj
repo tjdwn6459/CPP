@@ -19,13 +19,13 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="ctest.cpp" />
+    <ClCompile Include="timeadd.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{e94c5c26-0e8a-49c1-b376-898b66693428}</ProjectGuid>
-    <RootNamespace>practice1</RootNamespace>
+    <ProjectGuid>{affc6edd-987b-4582-8a07-c238642c07ba}</ProjectGuid>
+    <RootNamespace>chart5</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
