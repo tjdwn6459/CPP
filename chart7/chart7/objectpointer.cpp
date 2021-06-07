@@ -53,7 +53,7 @@ int main()
 	pH = &h;
 	pS = &s;
 	pH = &s;
-	
+
 	//자식 자료형으로 부모를 가리키는것이 안되기에 부모를(student*)로 형변환을 해줘야한다 
 	pS = (Student*)&h;
 	pS->intro();

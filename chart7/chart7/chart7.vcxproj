@@ -18,11 +18,14 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\PKNU\Desktop\cursor.h" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{0b7cae43-05f2-4117-9036-7213f43d87eb}</ProjectGuid>
-    <RootNamespace>chart6</RootNamespace>
+    <ProjectGuid>{eca964a2-c162-4a4b-82c6-940b10c4850d}</ProjectGuid>
+    <RootNamespace>chart7</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />

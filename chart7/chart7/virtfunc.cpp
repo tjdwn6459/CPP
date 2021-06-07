@@ -14,7 +14,7 @@ public:
 		strcpy(name, aname);
 		age = aage;
 	}
-	 virtual void intro()
+	virtual void intro()
 	{
 		printf("이름 = %s, 나이 = %d\n", name, age);
 	}
@@ -25,7 +25,7 @@ protected:
 	int stunum;
 
 public:
-	Student(const char * aname, int aage, int astunum) : Human(aname, aage)
+	Student(const char* aname, int aage, int astunum) : Human(aname, aage)
 	{
 		stunum = astunum;
 	}
