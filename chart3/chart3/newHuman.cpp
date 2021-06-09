@@ -9,9 +9,9 @@ private:
 
 public:
 	Human(const char* aname, int aage) {
-		pname = new char[strlen(aname) + 1];
-		strcpy(pname, aname);
-		age = aage;
+		pname = new char[strlen(aname) + 1];//메모리동적 할당
+		strcpy(pname, aname); //이름 복사
+		age = aage;//나이 값 변수에 복사
 		printf("== <%s>객체 생성 ==\n", pname);
 	}
 
