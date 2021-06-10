@@ -1,0 +1,82 @@
+210527
+led를 1초 단위로 깜빡거리게(횟수는 10번정도)
+
+INTEGER 정수
+TEXT 문자열
+REAL 실수
+BLOB 바이너리
+NULL 빈값
+
+웹페이지에 버튼을만들어 그걸 누르면
+led(on/off)
+led(무드등)
+mport RPi.GPIO as GPIO
+
+ledPin = 21
+
+GPIO.setmode(GPIO.BCM)
+GPIO.setup(ledPin, GPIO.OUT)
+
+p = GPIO.PWM(ledPin, 255)
+
+p.start(0)
+
+while True:
+        d = input("Enter Brightness(0 to 100) : ")
+        duty = int(d)
+
+        if(duty == 100):
+                p.strop()
+                GPIO.cleanup()
+                break
+        else:
+                p.ChangeDutyCycle(duty)
+피에조(노래) piano.py
+초음파 ultrasonic
+import RPi.GPIO as GPIO
+ 2 import time
+ 3
+ 4 triggerPin = 14
+ 5 echoPin = 4
+ 6 pinPiezo = 13
+ 7 LED = 21
+ 8
+ 9 GPIO.setmode(GPIO.BCM)
+10 GPIO.setup(triggerPin, GPIO.OUT)
+11 GPIO.setup(echoPin, GPIO.IN)
+12 GPIO.setup(pinPiezo, GPIO.OUT)
+13 GPIO.setup(LED, GPIO.OUT)
+14
+15 Buzz = GPIO.PWM(pinPiezo, 365)
+16
+17 scale = [261, 587]
+     try:
+20     while True:
+21         time.sleep(0.2)
+22         GPIO.output(triggerPin, GPIO.LOW)
+23         time.sleep(0.00001)
+24         GPIO.output(triggerPin, GPIO.HIGH)
+25
+26
+27         while GPIO.input(echoPin) == 0:
+28             start = time.time()
+29         while GPIO.input(echoPin) == 1:
+        rtTotime = stop - start
+33         distance = rtTotime * 34000 / 2
+34         print("distance : %.2f cm" % distance)
+35         if distance <= 10 and distance >=6:
+36             print("알림")
+37             GPIO.output(LED, GPIO.HIGH)
+38             time.sleep(1)
+39             GPIO.output(LED, GPIO.LOW)
+40             Buzz.start(50)
+41             Buzz.ChangeFrequency(scale[0])
+42             time.sleep(0.1)
+43             Buzz.stop()
+44         elif distance <=5 :
+45             print("비상")
+46             Buzz.start(50)
+47             Buzz.ChangeFrequency(scale[1])
+48             time.sleep(0.3)
+49             Buzz.stop()
+
